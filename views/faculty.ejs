@@ -1,0 +1,50 @@
+<%- include('templates/header') %>
+    <header id="header" class="d-flex align-items-center">
+        <div class="container d-flex align-items-center justify-content-between">
+            <a href="/" class="logo"><img src="/static/img/logo.svg" alt="Unicoin"></a>
+
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="nav-link scrollto" href="/">Home</a></li>
+                    <li><a class="nav-link scrollto active" href="/faculty">Faculties</a></li>
+                    <li><a class="nav-link scrollto" href="/student">Students</a></li>
+                    <li><a class="nav-link scrollto" href="/intern">Interns</a></li>
+                </ul>
+            </nav><!-- .navbar -->
+
+        </div>
+    </header><!-- End Header -->
+    <div class="container">
+        <div>
+            <h2>Faculty Details</h2>
+            <input type="text" name="" id="search">
+
+                <p>Page loaded in <%= exectime%> milliseconds </p>
+
+        </div>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Faculty ID</th>
+                    <th>Faculty Name</th>
+                    <th>Faculty Title</th>
+                    <th>Salary</th>
+                    <th>Phone number</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% faculty.forEach(data=> { %>
+                    <tr>
+                        <td><%= data.FacultyID %></td>
+                        <td><%= data.FacultyName %></td>
+                        <td><%= data.FacultyTitle %></td>
+                        <td><%= data.FacultySalary %></td>
+                        <td><%= data.FacultyPhone %></td>
+                    </tr>
+                    <% }) %>
+            </tbody>
+        </table>
+
+    </div>
+    <%- include('templates/footerprev') %>
+        <%- include('templates/footer') %>

@@ -1,0 +1,78 @@
+<%- include('templates/header') %>
+    <script>
+        $(document.body).addClass('login-body');
+    </script>
+
+    <main class="main d-flex" style="height: 100vh;">
+        <div class="container m-auto">
+            <div class="row d-flex align-items-center justify-content-between">
+                <div class="col-md-6 hero-section">
+
+                        <div data-aos="fade-zoom-in" data-aos-duration="700">
+                            <img id="hero-image" src="/static/img/logo.svg" alt="">
+                        </div>
+                        <p data-aos="fade-zoom-up" data-aos-duration="700">A centralized <strong>digital transaction
+                            </strong> platform in <strong>
+                                North South University</strong></p>
+
+                </div>
+                <div class="col-md-6">
+                    <section class="wrapper" data-aos="fade-left" data-aos-offset="200" data-aos-delay="400"
+                        data-aos-duration="500">
+                        <div class="heading">
+                            <h1 class="text text-large">Sign In</h1>
+                            <p class="text text-normal">New user? <span><a href="/registration"
+                                        class="text text-links">Create an
+                                        account</a></span>
+                            </p>
+                        </div>
+                        <form class="form" action="/login" method="POST">
+                            <div class="input-control">
+                                <label for="email" class="input-label" hidden>Email Address</label>
+                                <input type="email" name="email" id="login-email" class="input-field"
+                                    placeholder="Email Address">
+                            </div>
+                            <div class="input-control">
+                                <label for="password" class="input-label" hidden>Password</label>
+                                <input type="password" name="password" id="login-password" class="input-field"
+                                    placeholder="Password">
+                            </div>
+                            <div class="input-control">
+                                <a href="/passwordrecovery" class="text text-links">Forgot Password</a>
+                                <button type="submit" id="login-submit" class="input-submit">Log In</button>
+                            </div>
+                        </form>
+                        <div class="striped">
+                            <span class="striped-line"></span>
+                            <span class="striped-text">Or</span>
+                            <span class="striped-line"></span>
+                        </div>
+                        <div class="method">
+                            <div class="method-control">
+                                <a href="#" class="method-action">
+                                    <i class="ion ion-logo-google"></i>
+                                    <span>Sign in with Google</span>
+                                </a>
+                            </div>
+                            <div class="method-control">
+                                <a href="#" class="method-action">
+                                    <i class="ion ion-logo-facebook"></i>
+                                    <span>Sign in with Facebook</span>
+                                </a>
+                            </div>
+                            <div class="method-control">
+                                <a href="#" class="method-action">
+                                    <i class="ion ion-logo-apple"></i>
+                                    <span>Sign in with Apple</span>
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+
+        </div>
+    </main>
+
+    <%- include('templates/footer') %>

@@ -1,0 +1,45 @@
+<%- include('templates/header') %>
+<header id="header" class="d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+        <a href="/" class="logo"><img src="/static/img/logo.svg" alt="Unicoin"></a>
+
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li><a class="nav-link scrollto" href="/">Home</a></li>
+                <li><a class="nav-link scrollto " href="/faculty">Faculties</a></li>
+                <li><a class="nav-link scrollto active" href="/student">Students</a></li>
+                <li><a class="nav-link scrollto" href="/intern">Interns</a></li>
+            </ul>
+        </nav><!-- .navbar -->
+
+    </div>
+</header><!-- End Header -->
+<div class="container">
+    <div>
+        <h2>Student Details</h2>
+        <input type="text" name="" id="search">
+    </div>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Faculty ID</th>
+                <th>Faculty Name</th>
+                <th>Student GPA</th>
+                <th>Phone number</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% student.forEach(data=> { %>
+                <tr>
+                    <td><%= data.StudentID %></td>
+                    <td><%= data.StudentName %></td>
+                    <td><%= data.StudentGPA %></td>
+                    <td><%= data.StudentPhone %></td>
+                </tr>
+                <% }) %>
+        </tbody>
+    </table>
+
+</div>
+<%- include('templates/footerprev') %>
+<%- include('templates/footer') %>

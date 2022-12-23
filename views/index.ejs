@@ -1,0 +1,43 @@
+<%- include('templates/header') %>
+
+    <header id="header" class="d-flex align-items-center">
+        <div class="container d-flex align-items-center justify-content-between">
+            <a href="/" class="logo"><img src="/static/img/logo.svg" alt="Unicoin"></a>
+
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="nav-link scrollto active" href="/">Home</a></li>
+                    <li><a class="nav-link scrollto" href="/faculty">Faculties</a></li>
+                    <li><a class="nav-link scrollto" href="sponsor.html">Students</a></li>
+                    <li><a class="nav-link scrollto" href="about.html">Interns</a></li>
+                </ul>
+            </nav><!-- .navbar -->
+
+        </div>
+    </header><!-- End Header -->
+
+    <div class="container">
+        <h1>Search Person</h1>
+        <form class="row g-3">
+            <div class="col-md-6">
+                <label for="input" class="form-label">Search</label>
+                <input type="text" class="form-control" id="input">
+            </div>
+            <div class="col-12">
+                <button id="submitbtn" type="submit" class="btn btn-primary">Search</button>
+            </div>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Person ID</th>
+                        <th>Person Name</th>
+                        <th>Phone Number</th>
+                    </tr>
+                </thead>
+                <tbody id="searchtablebody">
+                </tbody>
+            </table>
+        </form>
+    </div>
+    <%- include('templates/footerprev') %>
+        <%- include('templates/footer') %>
